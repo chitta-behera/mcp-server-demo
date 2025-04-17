@@ -1,3 +1,3 @@
 def greet():
     print("Hello from main branch!")
-    print("checking conflicts")
+    print("checking conflicts from dev")
