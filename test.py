@@ -1,5 +1,5 @@
 def greet():
     print("Hello from main branch!")
     print("checking conflicts from dev")
-    print("introduce con new flicts")
+    print("introduce con new flicts...")
     
