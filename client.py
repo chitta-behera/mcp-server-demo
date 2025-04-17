@@ -43,7 +43,7 @@ def get_prompt_to_identify_tool_and_arguments(query,tools):
                 "Choose the appropriate tool based on the user's question. \n"
                 f"User's Question: {query}\n"                
                 "If no tool is needed, reply directly.\n\n"
-                "IMPORTANT: When you need to use a tool, you must ONLY respond with "                
+                "IMPORTANT: When you need to use a tool, you must ONLY respond with "
                 "the exact JSON object format below, nothing else:\n"
                 "Keep the values in str "
                 "{\n"
@@ -63,8 +63,12 @@ async def run(query: str):
             # Get the list of available tools
             tools = await session.list_tools()
 
+            # print(f"Available tools: {tools}")
+
             prompt = get_prompt_to_identify_tool_and_arguments(query,tools.tools)
+            # print(prompt)
             llm_response = llm_client(prompt)
+            # print(f"LLM Response: {llm_response}")
 
             tool_call = json.loads(llm_response)
 
@@ -72,6 +76,7 @@ async def run(query: str):
             
             # Extract the text value from the result
             text_value = result.content[0].text
+            # print(text_value)
 
             return text_value
 

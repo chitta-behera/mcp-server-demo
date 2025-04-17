@@ -28,3 +28,5 @@ python server.py
 ```bash
 python client.py
 ```
+
+The demo includes a simple addition tool and a greeting resource. The client uses Claude 3.5 Sonnet to interpret user queries and call the appropriate tools.
