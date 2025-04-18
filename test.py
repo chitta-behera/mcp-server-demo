@@ -1,4 +1,4 @@
-def greet():
+def gree():
   print("Hello from dev branch!")
-  print("changes push from dev")
-  print("direct changes in main")
+print("changes push to create conflicts from dev")
+print("direct changes in main")
