@@ -1,2 +1,5 @@
 def gree():
-  print("Hello from develop branch!")
+Resolve:
+print("Hello from develop branch!")
+
+Score: 95
